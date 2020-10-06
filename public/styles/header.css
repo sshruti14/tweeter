@@ -1,0 +1,11 @@
+#header-bar {
+  height: 400px;
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color:#FFA500;
+  background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+  color: #e8fdff;
+}
