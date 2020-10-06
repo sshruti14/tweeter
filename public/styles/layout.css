@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -21,19 +23,16 @@ body {
   font-family: sans-serif;
 }
 
-nav{
+nav {
   font-family: Bungee;
 }
-
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+main {
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;
 }
-

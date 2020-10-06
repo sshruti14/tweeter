@@ -1,44 +1,38 @@
-#nav-bar{
-  height:120px;
-  width:100%;
-  background-color:#4056A1;
-  color:#e8fdff;
+#nav-bar {
+  height: 120px;
+  width: 100%;
+  background-color: #4056a1;
+  color: #e8fdff;
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-top: 1.5em;
-  padding-bottom: 1.5em
- 
+  padding-bottom: 1.5em;
 }
 
-
 /* Nav Bar Headers start */
-#nav-bar .tweetHeader{
-  display:flex;
+#nav-bar .tweetHeader {
+  display: flex;
   justify-content: space-between;
-  flex-direction:row;
+  flex-direction: row;
   /* align-items:center;   */
 }
 
 /* Tweeter Header styler */
 #nav-bar .header {
-  font-size: 2em; 
-  font-family: 'Bungee', cursive;
-} 
+  font-size: 2em;
+  font-family: "Bungee", cursive;
+}
 
-
-
-#nav-bar .newTweet{
-  display:flex;
+#nav-bar .newTweet {
+  display: flex;
   justify-content: center;
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
   font-size: 1em;
   margin: 10px;
   padding: 5px;
-  
 }
 /* Nav Bar Headers end*/
-
 
 /*Down  Arrow image on the header */
 .arrow {

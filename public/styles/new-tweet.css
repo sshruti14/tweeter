@@ -1,54 +1,57 @@
 .compose-box {
   width: 100%;
-  text-align:center ;
-  border-bottom-width: 4px
+  /* text-align: center; */
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 4px solid darkgray;
 }
 
+.compose-box:focus {
+  outline: none;
+}
+
+
 /* Footer div */
-.footer{
-  display:flex;
-  justify-content:space-between;
-  font-family: 'Bungee', cursive;
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", cursive;
 }
 
 /* Tweeter button */
-.btn{
-  background-color:#4056A1 ;
+.btn {
+  background-color: #4056a1;
   color: #e8fdff;
 }
 
-
 .tweet {
-  border: 2px solid black;
-  opacity: 0.6;
-  border-color: lightgray;
+  border: 4px solid;
+  opacity: 0.5;
+
+  margin: 10px;
+  /* border-bottom-width: 4px */
 }
 
 .tweet-header {
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 25px; 
+  font-size: 25px;
   font-style: bold;
   /* border: 1px solid grey; */
   height: 80px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
-.avatar {
-}
 
 .tweet-subheader {
-
   display: flex;
   justify-content: start;
   align-items: center;
- 
-}
-
-
-.name {
-  
 }
 
 .handle {
@@ -57,28 +60,45 @@
   align-items: center;
   font-size: 15px;
   color: darkgrey;
+  opacity: 0;
 }
 
+.tweet:hover .handle {
+  /*show handle when hovering over tweet*/
+  opacity: 0.8;
+}
+
+.text-tweet {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
 
 .time-stamp {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 12px;
   border-top: 1px solid grey;
-  padding: 1em;
+  margin: 10px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .icon {
-  display:flex;
+  display: flex;
   justify-content: end;
+  font-weight: bold;
 }
-
 
 .tweet:hover {
   opacity: 1;
+  box-shadow: 10px 10px lightsteelblue;
 }
 
-.tweet:hover .handle {
+/* .tweet:hover .handle {
   visibility: visible;
-}
+} */
