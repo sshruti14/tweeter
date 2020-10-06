@@ -1,0 +1,84 @@
+.compose-box {
+  width: 100%;
+  text-align:center ;
+  border-bottom-width: 4px
+}
+
+/* Footer div */
+.footer{
+  display:flex;
+  justify-content:space-between;
+  font-family: 'Bungee', cursive;
+}
+
+/* Tweeter button */
+.btn{
+  background-color:#4056A1 ;
+  color: #e8fdff;
+}
+
+
+.tweet {
+  border: 2px solid black;
+  opacity: 0.6;
+  border-color: lightgray;
+}
+
+.tweet-header {
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 25px; 
+  font-style: bold;
+  /* border: 1px solid grey; */
+  height: 80px;
+}
+
+.avatar {
+}
+
+.tweet-subheader {
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+ 
+}
+
+
+.name {
+  
+}
+
+.handle {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 15px;
+  color: darkgrey;
+}
+
+
+.time-stamp {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+  border-top: 1px solid grey;
+  padding: 1em;
+}
+
+.icon {
+  display:flex;
+  justify-content: end;
+}
+
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet:hover .handle {
+  visibility: visible;
+}
