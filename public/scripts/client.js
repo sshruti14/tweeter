@@ -67,18 +67,19 @@ const renderTweets = function (tweets) {
   }
 };
 
- //Get Request to load tweets
- function loadTweets() {
+//Get Request to load tweets
+function loadTweets() {
   $.ajax({
-    method: 'GET',
-    url: '/tweets/'
-  }).then(function (data) {
-    renderTweets(data);
-  }).catch(function (error) {
-    console.log(error);
-  });
+    method: "GET",
+    url: "/tweets/",
+  })
+    .then(function (data) {
+      renderTweets(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
-
 
 /*
  * Client-side JS logic goes here
@@ -96,13 +97,26 @@ $(document).ready(function () {
   $("#submit-tweet").on("submit", function (event) {
     event.preventDefault();
 
-    $.ajax({
-      method: "POST",
-      url: "/tweets/",
-      data: $(this).serialize(),
-    }).then(function (data) {
-      console.log(`Submitted Successfully ${data}`);
-      loadTweets();
-    });
+     //Validation
+     const textArea = $(".compose-box");
+     const text = textArea.val();
+
+    if (text === "" || text === null) {
+      //if text is null, show a message for empty text
+      alert(`Your message is empty!`);
+    } else if (text.length > 140) {
+      //if text exceed 140 characters, show a message for too long text
+      alert(`Your message is too long.Can not be greater than 140 chars!`);
+      //document.getElementById("submit-tweet").reset();
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets/",
+        data: $(this).serialize(),
+      }).then(function (data) {
+        console.log(`Submitted Successfully ${data}`);
+        loadTweets();
+      });
+    }
   });
 });
