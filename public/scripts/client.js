@@ -67,6 +67,19 @@ const renderTweets = function (tweets) {
   }
 };
 
+ //Get Request to load tweets
+ function loadTweets() {
+  $.ajax({
+    method: 'GET',
+    url: '/tweets/'
+  }).then(function (data) {
+    renderTweets(data);
+  }).catch(function (error) {
+    console.log(error);
+  });
+}
+
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -76,7 +89,8 @@ const renderTweets = function (tweets) {
 $(document).ready(function () {
   console.log("Client Js Loaded");
 
-  renderTweets(data);
+  //renderTweets(data);
+  loadTweets();
 
   //Post request to submit tweets
   $("#submit-tweet").on("submit", function (event) {
@@ -88,6 +102,7 @@ $(document).ready(function () {
       data: $(this).serialize(),
     }).then(function (data) {
       console.log(`Submitted Successfully ${data}`);
+      loadTweets();
     });
   });
 });
