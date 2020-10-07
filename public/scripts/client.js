@@ -24,9 +24,19 @@ const data = [
   },
 ];
 
+ //preventing xss with escaping
+ function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  console.log('Inside escape function'+div);
+  return div.innerHTML;
+}
+
+
 //creates each tweet
 const createTweetElement = function (tweet) {
-  var tweetContent = tweet.content.text;
+  var tweetContent = escape(tweet.content.text);
+  console.log(tweetContent);
   let tweetHandle = tweet.user.handle;
   let tweetUsername = tweet.user.name;
   let tweetAvatar = tweet.user.avatars;
