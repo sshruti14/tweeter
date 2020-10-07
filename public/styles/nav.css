@@ -1,5 +1,5 @@
 #nav-bar {
-  height: 120px;
+  height: 100px;
   width: 100%;
   background-color: #4056a1;
   color: #e8fdff;
@@ -7,6 +7,9 @@
   padding-right: 1.5em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
+  /* To make the header fixed */
+  position: fixed;
+  top:0;
 }
 
 /* Nav Bar Headers start */
