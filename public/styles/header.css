@@ -15,22 +15,21 @@ body .top-header {
   margin-left: 10px;
 }
 
-header .img-header{
+header .img-header {
   display: flex;
   justify-content: center;
   border: 10px;
 }
 
-header .name-header{
-  display: flex; 
+header .name-header {
+  display: flex;
   justify-content: center;
 }
 
-
+/* Resposnive handle for the header */
 @media only screen and (min-width: 1024px) {
-
-  body .top-header{
-   width: 30%;
-   float: left;
- }
+  body .top-header {
+    width: 30%;
+    float: left;
+  }
 }

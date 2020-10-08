@@ -34,22 +34,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <!-- <nav id="nav-bar"> 
-      <div class="tweetHeader">
-
-        <div>
-          <span class="header">Tweeter</span>
-        </div>
-        
-        <div class="newTweet">
-          <span>Write a new tweet</span>
-          <i class="arrow down"></i>
-          <i class="arrow down"></i>
-        </div>
-
-      </div>
-    </nav> -->
 
     <nav id="nav-bar">
       <span class="header">TWEETER</span>
@@ -74,12 +58,11 @@
       <section class="new-tweet">
         <div class="errorMsg" id="errorMsg">
         </div>
-        <!-- <h2>Compose Tweet</h2>
-      -->
+  
         <form id="submit-tweet" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea class="compose-box" name="text" id="tweet-text"></textarea>
-          <!-- <p id="message"></p> -->
+    
           <div class="footer">
             <input type="submit" value="Tweet" class="btn" />
             <output name="counter" id="counter" for="tweet-text">140</output>
