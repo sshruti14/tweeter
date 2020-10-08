@@ -32,7 +32,7 @@
   /* border-bottom-width: 4px */
 }
 
-.tweet-header {
+.tweet-header{
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -50,7 +50,7 @@
 
 .tweet-subheader {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -104,3 +104,33 @@
 /* .tweet:hover .handle {
   visibility: visible;
 } */
+.errorMsg {
+  border: solid red;
+  color: red;
+  padding: 5px;
+}
+
+@media only screen and (min-width: 1024px) {
+  form{
+    width: 60%;
+    float: right;
+    line-height: 50px;
+  }
+   label {
+    float: left;
+    width: 60%;
+    margin-top: 25px;
+  } 
+  .footer{
+    line-height: 0px;
+    margin-block-end: 20px;
+  }
+  .tweet-container {
+    width: 60%;
+    float: right;
+  }
+  .errorMsg{
+    width: 60%;
+    float: right;
+  }
+}

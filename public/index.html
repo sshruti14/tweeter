@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <!--Font Tag-->
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap"
+    rel="stylesheet">
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -31,7 +35,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar"> 
+    <!-- <nav id="nav-bar"> 
       <div class="tweetHeader">
 
         <div>
@@ -45,27 +49,37 @@
         </div>
 
       </div>
+    </nav> -->
+
+    <nav id="nav-bar">
+      <span class="header">TWEETER</span>
+      <span class="newTweet">Write a new tweet</span>
+      <div class="arrow">
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+      </div>
     </nav>
 
-    <header id="header-bar">
-      <div>
-          <img src="/images/profile-hex.png"> 
+    <header class="top-header">
+      <div class="img-header">
+        <img src="/images/profile-hex.png">
       </div>
       <br>
-      <div>
-          <h2>Shruti Shetty</h2>
+      <div class="name-header">
+        <h2>Shruti Shetty</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-     
+        <div class="errorMsg" id="errorMsg">
+        </div>
+        <!-- <h2>Compose Tweet</h2>
+      -->
         <form id="submit-tweet" method="POST" action="/tweets/">
           <label for="tweet-text">What are you humming about?</label>
           <textarea class="compose-box" name="text" id="tweet-text"></textarea>
-          <p id="message"></p>
+          <!-- <p id="message"></p> -->
           <div class="footer">
             <input type="submit" value="Tweet" class="btn" />
             <output name="counter" id="counter" for="tweet-text">140</output>

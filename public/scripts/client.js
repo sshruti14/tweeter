@@ -100,12 +100,16 @@ function loadTweets() {
 $(document).ready(function () {
   console.log("Client Js Loaded");
 
+    //Hide the error message box while initial loading
+    $("#errorMsg").hide();
+
   //renderTweets(data);
   loadTweets();
 
   //Post request to submit tweets
   $("#submit-tweet").on("submit", function (event) {
     event.preventDefault();
+    
 
      //Validation
      const textArea = $(".compose-box");
@@ -113,10 +117,16 @@ $(document).ready(function () {
 
     if (text === "" || text === null) {
       //if text is null, show a message for empty text
-      alert(`Your message is empty!`);
+      $("#errorMsg").empty()
+      $("#errorMsg").slideDown();
+      $("#errorMsg").append("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp; Your tweet is too short &nbsp; <i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i>");
+      //alert(`Your message is empty!`);
     } else if (text.length > 140) {
       //if text exceed 140 characters, show a message for too long text
-      alert(`Your message is too long.Can not be greater than 140 chars!`);
+      $("#errorMsg").empty()
+      $("#errorMsg").slideDown();
+      $("#errorMsg").append("<i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i> &nbsp; Your tweet is too long &nbsp; <i class=\"fa fa-exclamation-triangle\" aria-hidden=\"true\"></i>");
+      //alert(`Your message is too long.Can not be greater than 140 chars!`);
       //document.getElementById("submit-tweet").reset();
     } else {
       $.ajax({
@@ -124,8 +134,11 @@ $(document).ready(function () {
         url: "/tweets/",
         data: $(this).serialize(),
       }).then(function (data) {
+        $('.tweet-container').empty()
         console.log(`Submitted Successfully ${data}`);
         loadTweets();
+        $('#tweet-text').val('');
+        
       });
     }
   });

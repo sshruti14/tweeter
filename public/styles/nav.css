@@ -1,51 +1,43 @@
 #nav-bar {
-  height: 100px;
-  width: 100%;
-  background-color: #4056a1;
-  color: #e8fdff;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-  /* To make the header fixed */
+  background-color: #4056A1;
+  height: 120px;
+  align-items: center;
+  color:white;
   position: fixed;
-  top:0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* Nav Bar Headers start */
-#nav-bar .tweetHeader {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  /* align-items:center;   */
-}
 
 /* Tweeter Header styler */
-#nav-bar .header {
-  font-size: 2em;
-  font-family: "Bungee", cursive;
+
+.header {
+  font-family: 'Bungee', cursive;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  float: left;
+  display: flex;
+  justify-content: flex-start;
 }
 
-#nav-bar .newTweet {
+.newTweet {
+  font-family: 'Source Sans Pro';
+  margin-right: 1.5em;
+  margin-top: 1.5em;
+  float: right;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1em;
-  margin: 10px;
-  padding: 5px;
+  justify-content: flex-end;
 }
-/* Nav Bar Headers end*/
+
+
 
 /*Down  Arrow image on the header */
 .arrow {
-  border: solid RED;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
+  margin-top: 3.5em;
+  margin-right: -4.5em;
+  color: red;
+  float: right;
 }
 
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
+
