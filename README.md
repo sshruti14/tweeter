@@ -17,6 +17,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## ScreenShots
 !["ScreenShot of tweets"](https://github.com/sshruti14/tweeter/blob/master/docs/new-tweet.PNG)
-!["ScreenShot of tweet compose box"](https://github.com/sshruti14/tweeter/blob/master/docs/tweet-box.PNG)
+!["ScreenShot of tweet compose box"](https://github.com/sshruti14/tweeter/blob/master/docs/tweet-box-rev.PNG)
 !["ScreenShot of tweets"](https://github.com/sshruti14/tweeter/blob/master/docs/tweets.png)
 
