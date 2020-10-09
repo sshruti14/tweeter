@@ -25,6 +25,19 @@ header .name-header {
   display: flex;
   justify-content: center;
 }
+/* Resposnive handle for the header */
+@media screen and (max-width: 804px) {
+ 
+  body .top-header  {
+    flex-direction:1 column;
+    background-color: darkgoldenrod;
+    background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
+    margin-top: 95px;
+    margin-left: 0px;
+  }
+}
+
+
 
 /* Resposnive handle for the header */
 @media only screen and (min-width: 1024px) {
@@ -32,4 +45,7 @@ header .name-header {
     width: 30%;
     float: left;
   }
+  
 }
+
+
