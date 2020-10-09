@@ -26,7 +26,7 @@ header .name-header {
   justify-content: center;
 }
 /* Resposnive handle for the header */
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 768px) {
  
   body .top-header  {
     flex-direction:1 column;
